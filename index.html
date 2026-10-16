@@ -405,7 +405,7 @@ var EJS_CANCEL_TEMPLATE_ID = 'template_n20losv'; // Client - reservation cancell
 })();
 var SB_URL = 'https://jzlnqffruqmtwwqcnrgp.supabase.co';
 var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzhqP3Xl5tl6nLyBjHWfq_DWs1YhvWdvz3hdSECnmNcIr_hHeCIx4VFdClpYGi24XQ/exec';
-var SB_KEY = 'sb_publishable_nLBY8lBq0KEiG3c9q1DhDw_h1fFRJ4T';
+var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp6bG5xZmZydXFtdHd3cWNucmdwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk2NjA1NjksImV4cCI6MjA5NTIzNjU2OX0.cY1G6zV19Eh3PWEU5nDI8pUbmgh2Vjf0lUYR6tt3va8';
 var currentLang = 'en';
 var selectedTables = [];
 var maxTables = 1;
@@ -1130,7 +1130,7 @@ async function renderEnabledDatesList(){
     var label = days[d.getDay()]+' '+d.getDate()+' '+months[d.getMonth()]+' '+d.getFullYear();
     var chip = document.createElement('div');
     chip.style.cssText = 'display:flex;align-items:center;gap:6px;background:#1a1200;border:1px solid var(--gold);border-radius:20px;padding:4px 10px;font-size:11px;color:var(--gold);font-weight:600;';
-    chip.innerHTML = label + '<button onclick="adminRemoveDate(''+key+'')" style="background:none;border:none;color:#888;cursor:pointer;font-size:13px;padding:0;line-height:1;">×</button>';
+    chip.innerHTML = label + '<button onclick="adminRemoveDate(\'' + key + '\')" style="background:none;border:none;color:#888;cursor:pointer;font-size:13px;padding:0;line-height:1;">×</button>';
     container.appendChild(chip);
   });
 }
